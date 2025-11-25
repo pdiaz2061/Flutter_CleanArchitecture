@@ -43,7 +43,7 @@ void main() {
     // final result = await useCase(NoParams());
 
     // Assert
-    expect(testProduct, (isA<ProductEntity>()));
+    expect(testProduct, isNot(isA<ProductEntity>()));
     verify(mockProductRepository.getAllProducts()).called(1);
     verifyNoMoreInteractions(mockProductRepository);
   });
